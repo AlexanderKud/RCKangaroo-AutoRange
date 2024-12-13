@@ -26,12 +26,17 @@ Start with the following parameters:
 
 The bit range (`-range`) will be calculated automatically as `134`.
 
-Run the script as follows:
+Run the script for **Linux** as follows:
 ```bash
-python3 script.py -dp 16 -pubkey <YOUR_PUBLIC_KEY> -start 4000000000000000000000000000000000 -end 7fffffffffffffffffffffffffffffffff
+python3 script.py -dp 16 -pubkey 02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -start 4000000000000000000000000000000000 -end 7fffffffffffffffffffffffffffffffff
+```
+Run the script for **Windows** as follows:
+```bash
+python script.py -dp 16 -pubkey 02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -start 4000000000000000000000000000000000 -end 7fffffffffffffffffffffffffffffffff
 ```
 
-#### Specifying a Custom Range:
+
+#### Specifying a Custom Range for Puzzle 135:
 
 If you choose a smaller range, for example:
 
@@ -40,16 +45,26 @@ If you choose a smaller range, for example:
 
 The calculated bit range will be `129`.
 
-Run the script as:
+Run the script for **Linux** as:
 ```bash
-python3 script.py -dp 16 -pubkey <YOUR_PUBLIC_KEY> -start 5500000000000000000000000000000000 -end 5600000000000000000000000000000000
+python3 script.py -dp 16 -pubkey 02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -start 5500000000000000000000000000000000 -end 5600000000000000000000000000000000
+```
+Run the script for **Windows** as:
+```bash
+python script.py -dp 16 -pubkey 02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -start 5500000000000000000000000000000000 -end 5600000000000000000000000000000000
 ```
 
 #### Benchmark Mode
 
 To run in benchmark mode without specifying a `-pubkey`, simply omit the `-pubkey`, `-start`, and `-end` parameters:
+
+**Linux:**
 ```bash
 python3 script.py -dp 16 -gpu 035
+```
+**Windows:**
+```bash
+python script.py -dp 16 -gpu 035
 ```
 
 ## Notes
@@ -60,9 +75,5 @@ python3 script.py -dp 16 -gpu 035
 ## Installation
 
 1. Clone this repository.
-2. Ensure Python 3 is installed on your system.
+2. Ensure (Python 3 for Linux / Python for Windows) is installed on your system.
 3. Place the script in the same directory as the `RCKangaroo` executable.
-
-## License
-
-This script is provided under the MIT License. Refer to the `LICENSE` file for details.
