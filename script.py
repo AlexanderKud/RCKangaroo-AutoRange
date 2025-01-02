@@ -1,4 +1,3 @@
-import os
 import subprocess
 import sys
 
@@ -20,14 +19,10 @@ def calculate_bit_range(start_hex, end_hex):
     
     return bit_range
 
-# Get the executable name based on the OS
-def get_executable():
-    return "RCKangaroo.exe" if os.name == "nt" else "./RCKangaroo"
-
 # Main function to execute the command
 def main():
     if len(sys.argv) < 5:
-        print("Usage: python script.py -dp DP [-gpu GPU] [-pubkey PUBKEY -start START -end END]")
+        print("Usage: python3 run_RCKangaroo.py -dp DP [-gpu GPU] [-pubkey PUBKEY -start START -end END]")
         sys.exit(1)
 
     # Parse parameters
@@ -38,6 +33,9 @@ def main():
     pubkey = args.get("-pubkey", None)
     start_hex = args.get("-start", None)
     end_hex = args.get("-end", None)
+    tames = args.get("-tames", None)
+    max = args.get("-max", None)
+    
 
     # Validate mandatory parameters
     if not dp or not (14 <= int(dp) <= 60):
@@ -64,10 +62,16 @@ def main():
         bit_range = None
 
     # Command to execute
-    command = [get_executable(), "-dp", dp]
+    command = ["./rckangaroo", "-dp", dp]
 
     if gpu:
         command.extend(["-gpu", gpu])
+    
+    if tames:
+        command.extend(["-tames", tames])
+        
+    if max:
+        command.extend(["-max", max])
 
     if pubkey:
         command.extend([
