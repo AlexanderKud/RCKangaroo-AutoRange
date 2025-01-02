@@ -14,6 +14,10 @@ This repository contains a Python script to simplify the process of launching [R
 - `-gpu` (Optional): Specifies which GPUs to use. For example, `"035"` means GPUs #0, #3, and #5 are used. If not specified, all available GPUs are used.
 - `-pubkey` (Optional): The public key to solve. Both compressed and uncompressed keys are supported. If not provided, the script starts in benchmark mode.
 - `-start` and `-end` (Mandatory if `-pubkey` is specified): Define the private key search space in hexadecimal.
+- `-max` (Mandatory if used -tames): Option to limit max number of operations. For example, value 5.5 limits number of operations to 5.5 * 1.15 * sqrt(range), software stops when the limit is reached.
+- `-tames` (Optional): 	Filename with tames. If file not found, software generates tames (option "-max" is required) and saves them to the file. If the file is found, software loads tames to speedup solving.
+
+
 
 ### Examples
 
