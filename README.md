@@ -28,11 +28,11 @@ The bit range (`-range`) will be calculated automatically as `134`.
 
 Run the script for **Linux** as follows:
 ```bash
-python3 script.py -dp 16 -pubkey 02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -start 4000000000000000000000000000000000 -end 7fffffffffffffffffffffffffffffffff
+python3 script.py -dp 16 -tames tames.dat -max 3 -pubkey 02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -start 4000000000000000000000000000000000 -end 7fffffffffffffffffffffffffffffffff
 ```
 Run the script for **Windows** as follows:
 ```bash
-python script.py -dp 16 -pubkey 02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -start 4000000000000000000000000000000000 -end 7fffffffffffffffffffffffffffffffff
+python script.py -dp 16 -tames tames.dat -max 3 -pubkey 02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -start 4000000000000000000000000000000000 -end 7fffffffffffffffffffffffffffffffff
 ```
 
 
@@ -47,11 +47,11 @@ The calculated bit range will be `129`.
 
 Run the script for **Linux** as:
 ```bash
-python3 script.py -dp 16 -pubkey 02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -start 5500000000000000000000000000000000 -end 5600000000000000000000000000000000
+python3 script.py -dp 16 -tames tames.dat -max 3 -pubkey 02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -start 5500000000000000000000000000000000 -end 5600000000000000000000000000000000
 ```
 Run the script for **Windows** as:
 ```bash
-python script.py -dp 16 -pubkey 02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -start 5500000000000000000000000000000000 -end 5600000000000000000000000000000000
+python script.py -dp 16 -tames tames.dat -max 3 -pubkey 02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16 -start 5500000000000000000000000000000000 -end 5600000000000000000000000000000000
 ```
 
 #### Benchmark Mode
